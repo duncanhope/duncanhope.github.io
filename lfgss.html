@@ -13,12 +13,8 @@
     <meta name="referrer" content="origin" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <!--[if lt IE 9]>
-      <script src="/static/3rd/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="/static/3rd/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <link
-      href="/static/themes/1/css/bootstrap.min.css"
+      href="https://lfgss.microcosm.app/static/themes/1/css/bootstrap.min.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -2650,35 +2646,6 @@
     <script src="/static/js/bootstrap.min.js"></script>
     <script src="/static/js/base.js"></script>
     <script src="/static/js/metabar.js?v=20160619"></script>
-    <script>
-      window.init = () => {
-        window.GrafanaFaroWebSdk.initializeFaro({
-          url: "https://faro-collector-prod-eu-west-0.grafana.net/collect/22667facefbf1c48bf2dd30a508de129",
-          app: { name: "LFGSS", version: "1.0.0", environment: "production" },
-        });
-      };
-      window.addTracing = () => {
-        window.GrafanaFaroWebSdk.faro.instrumentations.add(
-          new window.GrafanaFaroWebTracing.TracingInstrumentation()
-        );
-      };
-    </script>
-    <script
-      src="https://unpkg.com/@grafana/faro-web-sdk@1.0.0-beta4/dist/bundle/faro-web-sdk.iife.js"
-      onload="window.init()"
-    ></script>
-    <script
-      src="https://unpkg.com/@grafana/faro-web-tracing@1.0.0-beta4/dist/bundle/faro-web-tracing.iife.js"
-      onload="window.addTracing()"
-    ></script>
-
-    <form id="signout-form" class="hidden" method="POST" action="/logout/">
-      <input
-        type="hidden"
-        name="csrfmiddlewaretoken"
-        value="Umjmhr8LjSymToSUqgm7glrgmlsfIlBI"
-      />
-    </form>
     <script type="text/javascript">
       function authSignout() {
         document.getElementById("signout-form").submit();

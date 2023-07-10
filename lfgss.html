@@ -9,6 +9,28 @@
     <script src="main.js"></script>
   </head>
   <body>
-    Hello World
+    <div class="pagination-alt">
+      Page
+      <form
+        name="paginationByOffset"
+        method="GET"
+        data-initial="4712"
+        data-limit="25"
+        data-max="4712"
+      >
+        <input
+          type="text"
+          min="1"
+          value="4712"
+          max="4712"
+          step="1"
+          pattern="\d*"
+          title="Enter the page number to jump to"
+          class="form-control"
+        />
+        <input name="offset" type="hidden" />
+      </form>
+      of 4,712
+    </div>
   </body>
 </html>
